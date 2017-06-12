@@ -25,6 +25,7 @@ FROM ubuntu:14.04
 #    && npm install -g azure-cli \
 #    && npm cache clean
 
+# Dependencies
 RUN apt-get update \
     && apt-get install -y \
         gettext \
@@ -37,26 +38,21 @@ RUN apt-get update \
         uuid-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# Add dependencies for building cross rootfs
 RUN apt-get update  \
     && apt-get install -y \
-        wget \
-    && echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.6 main" | tee /etc/apt/sources.list.d/llvm.list \
-    && wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | apt-key add - \
-    && apt-get update     && apt-get install -y \
         binfmt-support  \
-        binutils-arm-linux-gnueabihf \
-        clang-3.6 \
         cmake \
         debootstrap \
-        lldb-3.6 \
-        lldb-3.6-dev \
-        llvm-3.6 \
         make \
         qemu \
         qemu-user-static \
     && rm -rf /var/lib/apt/lists/*
 
+# Add clang 3.9
 RUN apt-get update \
+    && apt-get install -y \
+        wget \
     && echo "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.9 main" >> /etc/apt/sources.list.d/llvm.list \
     && echo "deb-src http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.9 main" >> /etc/apt/sources.list.d/llvm.list \
     && wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - \
