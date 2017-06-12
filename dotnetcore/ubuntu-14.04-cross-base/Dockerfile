@@ -11,6 +11,7 @@
 
 
 FROM ubuntu:14.04
+MAINTAINER Hyung-Kyu Choi <hk0110.choi@samsung.com>
 
 # Do we need this? It seems to be not neccesary
 #RUN apt-get update \

@@ -1,4 +1,5 @@
 FROM hqueue/dotnetcore:ubuntu-14.04-cross-base
+MAINTAINER Hyung-Kyu Choi <hk0110.choi@samsung.com>
 
 # Add toolchain for arm (hardfp) 
 # binutils-arm-linux-gnueabihf and clang 3.9
