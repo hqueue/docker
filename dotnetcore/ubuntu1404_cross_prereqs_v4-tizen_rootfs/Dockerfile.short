@@ -1,0 +1,15 @@
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+dbd74416c62e        6 weeks ago         /bin/bash                                       256 MB              
+4c6be8e1efd5        2 months ago        /bin/sh -c apt-get update     && echo "deb...   445 MB              
+<missing>           3 months ago        /bin/sh -c apt-get update     && echo "deb...   5.44 MB             
+<missing>           3 months ago        /bin/sh -c apt-get update     && apt-get i...   25.5 MB             
+<missing>           3 months ago        /bin/sh -c #(nop) ADD dir:716703365c1c06af...   785 MB              
+<missing>           3 months ago        /bin/sh -c apt-get update     && apt-get i...   692 MB              
+<missing>           5 months ago        /bin/sh -c apt-get update     && apt-get i...   98.1 MB             
+<missing>           5 months ago        /bin/sh -c apt-get update     && apt-get i...   271 MB              
+<missing>           5 months ago        /bin/sh -c #(nop)  CMD ["/bin/bash"]            0 B                 
+<missing>           5 months ago        /bin/sh -c mkdir -p /run/systemd && echo '...   7 B                 
+<missing>           5 months ago        /bin/sh -c sed -i 's/^#\s*\(deb.*universe\...   1.9 kB              
+<missing>           5 months ago        /bin/sh -c rm -rf /var/lib/apt/lists/*          0 B                 
+<missing>           5 months ago        /bin/sh -c set -xe   && echo '#!/bin/sh' >...   195 kB              
+<missing>           5 months ago        /bin/sh -c #(nop) ADD file:b2236d49147fe14...   188 MB              
